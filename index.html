@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+    <link rel="stylesheet" href="services/css/style.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body onload="onInit()">
+    <h1>BookShop!</h1>
+    <div class="filter-container">
+        <h2>Filter</h2>
+        <section class="book-filter">
+            <div class="search-container">
+                <form class="form-search" onclick="onClickForm(event)">
+                    <input type="text" placeholder="Search.." name="search" class="filter-txt-search"
+                        onchange="this.title=this.value;onSetFilterBy({title: this.value})">
+                    <button type="submit" onclick="onClickSubmit()">Submit</button>
+                </form>
+            </div>
+            <label>
+                Min Rating:
+                <input type="range" min="1" max="10" value="5" class="filter-rating-range"
+                    onchange="this.title=this.value;onSetFilterBy({minRating: this.value})" />
+            </label> <label>
+                Min Price:
+                <input type="range" min="100" max="1000" class="filter-price-range"
+                    onchange="this.title=this.value;onSetFilterBy({minPrice: this.value})" />
+            </label>
+        </section>
+        <hr />
+        <div class="button-container">
+            <button title="Add book" onclick="onAddBook()">Add book</button>
+            <div class="paging-container">
+                <button class="prev-page" onclick="onPreviousPage()">previous Page</button>
+
+                <button class="next-page" onclick="onNextPage()">Next Page</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container hide">
+        <h3></h3>
+        <h4>Maximal price <span></span> </h4>
+        <h5>Book Description</h5>
+        <p class="desc-modal"></p>
+        <div class="rate-inner-container"> Rate this book:<div class="rate-button-container">
+                <button onclick="onAddRating()">+</button>
+                <div class="rating" min="1" max="10"> 1 </div>
+                <button onclick="onLessenRating()">-</button>
+            </div>
+        </div>
+        <button class="close-modal-btn" onclick="onCloseModal()">Close</button>
+    </div>
+    <section class="books-container">
+        <table>
+            <thead class="table-head">
+                <tr>
+                    <th class="book-id">Id</th>
+                    <th class="title">Title</th>
+                    <th class="price">Price</th>
+                    <th class="rating">Rating</th>
+                    <th class="img">Image</th>
+                    <th class="action">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-container">
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <script src="services/storage-services.js"></script>
+    <script src="controller.js"></script>
+    <script src="services/util.js"></script>
+    <script src="services/services.js"></script>
+</body>
+
+</html>

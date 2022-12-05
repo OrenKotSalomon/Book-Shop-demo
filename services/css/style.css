@@ -1,0 +1,196 @@
+/* 
+.table-container{
+
+} */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #E8D4BA;
+    align-items: center;
+
+
+}
+
+
+.filter-container {
+    background-color: #78948a;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.paging-container {
+    display: flex;
+    height: 3vh;
+}
+
+.paging-container button {
+    width: 125px;
+    font-size: 15px;
+}
+
+
+
+.books-container {
+    display: flex;
+    border: 3px solid #FFF8CC;
+    text-align: center;
+    width: 80vw;
+}
+
+
+tr {
+    justify-content: space-between;
+    background-color: #cecece;
+    font-size: 1.5em;
+    border: 1px solid white;
+}
+
+
+td {
+    font-size: 1rem;
+
+    border: 1px solid #FFF8CC;
+    width: 20vw;
+}
+
+th {
+    background-color: #7EF8CC;
+    justify-content: space-between;
+    border: 1px solid #FFF8CC;
+}
+
+.action {
+    width: 40vw;
+}
+
+
+
+img {
+    width: 60px;
+}
+
+.book-id {
+    width: 10vw;
+}
+
+.price {
+    width: 10vw;
+}
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin-bottom: 10px;
+
+}
+
+.action button {
+    margin: 2px;
+
+}
+
+.read-desc {
+    background-color: blue;
+    color: #FFF8CC;
+}
+
+.update {
+    background-color: rgb(255, 251, 0);
+    color: rgb(7, 6, 6);
+}
+
+.delete {
+    background-color: rgb(161, 0, 0);
+    color: rgb(226, 226, 226);
+}
+
+
+
+.modal-container {
+    position: absolute;
+    border: 3px solid #FFF8CC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: black;
+    color: #FFF8CC;
+    right: 0;
+    height: 75vh;
+}
+
+.modal-container .desc-modal {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: dashed;
+    text-align: left;
+
+}
+
+.modal-container .close-modal-btn {
+    position: absolute;
+    background-color: black;
+    border: 2px solid #FFF8CC;
+    color: #FFF8CC;
+    bottom: 10px;
+}
+
+.modal-container button:hover {
+    color: rgb(206, 71, 71);
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(201, 201, 201);
+    border-radius: 10px;
+
+}
+
+.rate-inner-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    align-items: center;
+    bottom: 50px;
+}
+
+.rate-inner-container button {
+
+    border: 1px solid white;
+    background-color: black;
+    color: #FFF8CC;
+}
+
+.rate-button-container {
+
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #FFF8CC;
+    margin-left: 10px;
+    height: 20px;
+    width: 80px;
+}
+
+
+.hide {
+    display: none;
+}
+
+/* 
+<th class="book-id">id</th>
+<th class="title">title</th>
+<th class="price">price</th>
+<th class="img">image</th>
+<th class="action">actions</th> */
